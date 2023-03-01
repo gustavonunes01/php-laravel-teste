@@ -30,12 +30,12 @@
                             <div class="col-3">
                                 <div class="form-group form-inline align-items-center">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gender" value="m">
-                                        <label class="form-check-label">Masculino</label>
+                                        <input class="form-check-input" type="radio" name="gender" value="m" id="masc">
+                                        <label class="form-check-label" for="masc">Masculino</label>
                                     </div>
                                     <div class="form-check ml-2">
-                                        <input class="form-check-input" type="radio" name="gender" value="f">
-                                        <label class="form-check-label">Femenino</label>
+                                        <input class="form-check-input" type="radio" name="gender" value="f" id="fem">
+                                        <label class="form-check-label" for="fem">Femenino</label>
                                     </div>
                                 </div>
                             </div>

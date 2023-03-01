@@ -86,7 +86,7 @@ class ListController extends Controller {
                 ->get();
         }elseif($data["name"] !== null) {
             $customers = Customers::select('id', 'name', 'cpf', "birthdate", "state", "city", "gender")
-                ->where("name", "=", $data["name"])
+                ->where("name", "like", "%{$data["name"]}%")
                 ->get();
         }elseif($data["birthdate"] !== null) {
             $customers = Customers::select('id', 'name', 'cpf', "birthdate", "state", "city", "gender")
@@ -94,15 +94,18 @@ class ListController extends Controller {
                 ->get();
         }elseif($data["state"] !== null) {
             $customers = Customers::select('id', 'name', 'cpf', "birthdate", "state", "city", "gender")
-                ->where("state", "=", $data["state"])
+                ->where("state", "like", "%{$data["state"]}%")
                 ->get();
         }elseif($data["city"] !== null) {
             $customers = Customers::select('id', 'name', 'cpf', "birthdate", "state", "city", "gender")
-                ->where("city", "=", $data["city"])
+                ->where("city", "like", "%{$data["city"]}%")
                 ->get();
         }elseif($data["gender"] !== null) {
             $customers = Customers::select('id', 'name', 'cpf', "birthdate", "state", "city", "gender")
                 ->where("gender", "=", $data["gender"])
+                ->get();
+        }else{
+            $customers = Customers::select('id', 'name', 'cpf', "birthdate", "state", "city", "gender")
                 ->get();
         }
 
@@ -111,16 +114,6 @@ class ListController extends Controller {
         $customers_array = array();
 
         foreach ($customers as $customer){
-
-//            array_push($customers_array, [
-//                $customer->id,
-//                $customer->name,
-//                $customer->cpf,
-//                $customer->birthdate,
-//                $customer->state,
-//                $customer->city,
-//                $customer->gender
-//            ]);
 
             array_push($customers_array, $customer);
 
