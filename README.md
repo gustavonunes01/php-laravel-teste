@@ -12,7 +12,7 @@
 ## :gear: Instalação
 1. Clone o projeto.
 ```bash
-git clone https://github.com/gustavonunes01/upd8-teste.git
+git clone https://github.com/gustavonunes01/php-laravel-teste.git
 ```
 
 2. Vai até a pasta do projeto.
