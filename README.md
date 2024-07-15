@@ -26,7 +26,7 @@ composer install
 ```
 
 ## 🌟 Agora como usar
-1. Vá novamente até a pasta `upd8-teste` e execute:
+1. Vá novamente até a pasta `php-laravel-teste` e execute:
 ```bash
 php artisan serve --port 8000
 ```
