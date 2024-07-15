@@ -1,4 +1,4 @@
-# Projeto de teste :upd8
+# Projeto de teste
 
 ## :computer: Tecnologias utilizadas
 - PHP  >=  7.3
